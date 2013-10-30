@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3XM-Yl-xXn"/>
+                        <viewControllerLayoutGuide type="bottom" id="3zv-OF-oyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="3D transform animation" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ptB-2P-s8T">
+                                <rect key="frame" x="20" y="50" width="984" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBj-oF-R4i">
+                                <rect key="frame" x="247" y="100" width="530" height="530"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="530" id="geL-qo-9R6"/>
+                                    <constraint firstAttribute="height" constant="530" id="iPW-yh-Ikk"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Qq-NJ-oew" appends="YES" id="TKf-S7-rP6"/>
+                                    <outletCollection property="gestureRecognizers" destination="36x-NF-bYR" appends="YES" id="nJT-q1-X0J"/>
+                                </connections>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVj-bf-dhG">
+                                <rect key="frame" x="567" y="646" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="transformLayerSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kd4-Qi-j7f"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use transform layer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srI-58-eBj">
+                                <rect key="frame" x="409" y="651" width="150" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="NWQ-be-gqT"/>
+                                    <constraint firstAttribute="width" constant="150" id="Ncs-co-wqF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="300" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="1BY-oc-G37">
+                                <rect key="frame" x="407" y="685" width="211" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="transformValueSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="A6g-EH-nYY"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWJ-rZ-ufM">
+                                <rect key="frame" x="624" y="691" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BQM-d5-Ywl"/>
+                                    <constraint firstAttribute="width" constant="50" id="evD-EK-whj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zDistance" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvN-mk-Nkl">
+                                <rect key="frame" x="301" y="691" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Bp7-uB-ZBK"/>
+                                    <constraint firstAttribute="width" constant="100" id="nY3-d9-Ppx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="1BY-oc-G37" firstAttribute="top" secondItem="rVj-bf-dhG" secondAttribute="bottom" constant="8" id="068-th-rJu"/>
+                            <constraint firstItem="kWJ-rZ-ufM" firstAttribute="centerY" secondItem="1BY-oc-G37" secondAttribute="centerY" id="9lP-4j-FIE"/>
+                            <constraint firstItem="zvN-mk-Nkl" firstAttribute="centerY" secondItem="1BY-oc-G37" secondAttribute="centerY" id="AF3-YS-gV6"/>
+                            <constraint firstItem="3zv-OF-oyo" firstAttribute="top" secondItem="1BY-oc-G37" secondAttribute="bottom" constant="50" id="I0B-yE-USd"/>
+                            <constraint firstItem="1BY-oc-G37" firstAttribute="leading" secondItem="zvN-mk-Nkl" secondAttribute="trailing" constant="8" id="WFD-hL-VZI"/>
+                            <constraint firstItem="rVj-bf-dhG" firstAttribute="leading" secondItem="srI-58-eBj" secondAttribute="trailing" constant="8" id="Way-ic-Cfa"/>
+                            <constraint firstItem="ptB-2P-s8T" firstAttribute="top" secondItem="3XM-Yl-xXn" secondAttribute="bottom" constant="30" id="aOf-7J-fvF"/>
+                            <constraint firstAttribute="trailing" secondItem="ptB-2P-s8T" secondAttribute="trailing" constant="20" id="eRS-sL-Nab"/>
+                            <constraint firstItem="1BY-oc-G37" firstAttribute="top" secondItem="srI-58-eBj" secondAttribute="bottom" constant="13" id="jDw-hK-gfX"/>
+                            <constraint firstAttribute="centerX" secondItem="srI-58-eBj" secondAttribute="centerX" constant="28" id="mWn-Ni-oj4"/>
+                            <constraint firstItem="rVj-bf-dhG" firstAttribute="trailing" secondItem="1BY-oc-G37" secondAttribute="trailing" id="mhL-J3-5PM"/>
+                            <constraint firstItem="1BY-oc-G37" firstAttribute="leading" secondItem="srI-58-eBj" secondAttribute="leading" id="sbY-h6-hDo"/>
+                            <constraint firstAttribute="centerY" secondItem="HBj-oF-R4i" secondAttribute="centerY" constant="19" id="uGC-qJ-a8w"/>
+                            <constraint firstAttribute="centerX" secondItem="HBj-oF-R4i" secondAttribute="centerX" id="vTC-3H-qoa"/>
+                            <constraint firstItem="kWJ-rZ-ufM" firstAttribute="leading" secondItem="1BY-oc-G37" secondAttribute="trailing" constant="8" id="wFS-yi-hjj"/>
+                            <constraint firstItem="ptB-2P-s8T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xrp-EY-l0c"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="containerView" destination="HBj-oF-R4i" id="ZfJ-hW-oUc"/>
+                        <outlet property="perspectiveAmountLabel" destination="kWJ-rZ-ufM" id="vR4-po-JXW"/>
+                        <outlet property="perspectiveAmountSlider" destination="1BY-oc-G37" id="Mel-7T-e54"/>
+                        <outlet property="transformLayerSwitch" destination="rVj-bf-dhG" id="DH8-wK-02S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="0Qq-NJ-oew">
+                    <connections>
+                        <action selector="panDetected:" destination="BYZ-38-t0r" id="coE-Xj-1uX"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="36x-NF-bYR">
+                    <connections>
+                        <action selector="viewPressed:" destination="BYZ-38-t0r" id="T9x-qe-qgN"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
